@@ -1,3 +1,13 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif; /* Usando a fonte Inter */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5; /* Cor de fundo suave para o corpo */
+}
+
+
 /* Cores principais - tema rosa */
 :root {
     --rosa-principal: #ff69b4;
@@ -181,29 +191,161 @@ nav ul li a:hover {
 .btn:hover {
     background-color: var(--rosa-escuro);
 }
-
-/* Vantagens */
-.advantages {
-    background-color: var(--rosa-suave);
-    padding: 40px 20px;
-    text-align: center;
+/* Container para centralizar o conteúdo */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto;   /* Centraliza o container na página */
+    padding: 20px;    /* Espaçamento interno */
 }
 
-.advantages h2 {
-    margin-bottom: 30px;
+/* Seção principal das vantagens */
+.vantagens-mylily {
+    background-color: #E6007A; /* Cor de fundo rosa vibrante da seção */
+    padding: 50px 0; /* Espaçamento interno superior e inferior ligeiramente diminuído */
+    color: #fff; /* Cor do texto dentro desta seção */
+    border-radius: 10px; /* Cantos arredondados na seção principal */
+    margin: 15px; /* Margem externa para destacar a seção ligeiramente diminuída */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.advantages-grid {
-    max-width: 800px;
-    margin: 0 auto;
+.vantagens-mylily h2 {
+    font-size: 2.2em; /* Tamanho do título ligeiramente diminuído */
+    margin-bottom: 30px; /* Espaçamento abaixo do título ligeiramente diminuído */
+    text-align: left; /* Alinha o título à esquerda, como na imagem */
+    padding-left: 15px; /* Alinha com o conteúdo do container ligeiramente diminuído */
+    font-weight: 700; /* Negrito para o título */
+}
+
+/* Grid para os itens de vantagem */
+.vantagens-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Largura mínima das colunas ligeiramente diminuída */
+    gap: 25px; /* Espaçamento entre os itens do grid ligeiramente diminuído */
+    padding: 0 15px; /* Padding para o grid ligeiramente diminuído */
 }
 
-.advantage-item {
-    padding: 15px;
+/* Estilo de cada item de vantagem */
+.vantagem-item {
+    background-color: #fff; /* Fundo branco para os cards */
+    padding: 25px; /* Padding ligeiramente diminuído */
+    border-radius: 15px; /* Cantos arredondados para os cards */
+    text-align: center; /* Centraliza o conteúdo do card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada para os cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
+    display: flex; /* Usar flexbox para alinhar conteúdo verticalmente */
+    flex-direction: column;
+    justify-content: space-between; /* Espaço entre o ícone, título e parágrafo */
+    align-items: center;
+    min-height: 230px; /* Altura mínima para os cards ligeiramente diminuída */
 }
+
+.vantagem-item:hover {
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse ligeiramente diminuído */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse ligeiramente diminuída */
+}
+
+/* Estilo da caixa do ícone */
+.icon-box {
+    background-color: #F8D9E7; /* Fundo rosa claro para a caixa do ícone */
+    width: 70px; /* Largura ligeiramente diminuída */
+    height: 70px; /* Altura ligeiramente diminuída */
+    border-radius: 50%; /* Faz a caixa do ícone ser circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento abaixo do ícone ligeiramente diminuído */
+}
+
+.icon-box i {
+    color: #E6007A; /* Cor rosa vibrante para os ícones */
+    font-size: 2.5em; /* Tamanho dos ícones ligeiramente diminuído */
+}
+
+/* Estilo do título do item */
+.vantagem-item h3 {
+    color: #E6007A; /* Cor rosa vibrante para os títulos dos cards */
+    font-size: 1.3em; /* Tamanho do título do item ligeiramente diminuído */
+    margin-top: 0;
+    margin-bottom: 8px; /* Espaçamento abaixo do título do item ligeiramente diminuído */
+    font-weight: 600; /* Seminegrito */
+}
+
+/* Estilo do parágrafo do item */
+.vantagem-item p {
+    color: #555; /* Cor de texto mais escura para o parágrafo */
+    font-size: 0.9em; /* Tamanho da fonte do parágrafo ligeiramente diminuído */
+    line-height: 1.5;
+    margin-bottom: 0; /* Remove margem inferior padrão */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .vantagens-mylily h2 {
+        font-size: 1.8em; /* Tamanho do título em telas menores ligeiramente diminuído */
+        text-align: center; /* Centraliza o título em telas menores */
+        padding-left: 0;
+    }
+
+    .vantagens-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .vantagem-item {
+        margin-bottom: 15px; /* Espaçamento entre os cards em telas menores ligeiramente diminuído */
+    }
+}
+
+/* Estilo da caixa do ícone */
+.icon-box {
+    background-color: #F8D9E7; /* Fundo rosa claro para a caixa do ícone */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Faz a caixa do ícone ser circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espaçamento abaixo do ícone */
+}
+
+.icon-box i {
+    color: #E6007A; /* Cor rosa vibrante para os ícones */
+    font-size: 3em; /* Tamanho dos ícones */
+}
+
+/* Estilo do título do item */
+.vantagem-item h3 {
+    color: #E6007A; /* Cor rosa vibrante para os títulos dos cards */
+    font-size: 1.5em; /* Tamanho do título do item */
+    margin-top: 0;
+    margin-bottom: 10px; /* Espaçamento abaixo do título do item */
+    font-weight: 600; /* Seminegrito */
+}
+
+/* Estilo do parágrafo do item */
+.vantagem-item p {
+    color: #555; /* Cor de texto mais escura para o parágrafo */
+    font-size: 1em; /* Tamanho da fonte do parágrafo */
+    line-height: 1.5;
+    margin-bottom: 0; /* Remove margem inferior padrão */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .vantagens-mylily h2 {
+        font-size: 2em;
+        text-align: center; /* Centraliza o título em telas menores */
+        padding-left: 0;
+    }
+
+    .vantagens-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .vantagem-item {
+        margin-bottom: 20px; /* Espaçamento entre os cards em telas menores */
+    }
+}
+
 
 /* Depoimentos */
 .testimonials-section {
