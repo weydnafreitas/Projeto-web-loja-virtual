@@ -11,19 +11,15 @@ body {
 
 /* Cores principais - tema rosa */
 :root {
-    --rosa-principal: #ff69b4;
-    --rosa-claro: #ffb6c1;
-    --rosa-escuro: #db7093;
-    --rosa-suave: #fff0f5;
-
-    /* Cores da seção de depoimentos */
-    --primary-pink: #E91E63; /* Rosa/Magenta dos botões e título dos depoimentos */
-    --light-pink: #FEE7ED; /* Rosa claro dos cards de depoimento */
-    --text-color: #333;
-    --light-text-color: #666;
-    --white: #fff;
-    --border-color: #eee;
+  --rosa-principal: #E6007A;       /* Cor principal */
+  --rosa-escuro: #B8005F;          /* Hover e elementos de contraste */
+  --rosa-suave: #FFF2F7;           /* Fundos leves */
+  --text-color: #2D0A1F;           /* Texto escuro puxando pro magenta */
+  --light-text-color: #73405E;     /* Textos secundários */
+  --white: #ffffff;
+  --border-color: #FFD2E5;         /* Borda sutil com tom rosado */
 }
+
 
 /* Estilos base */
 body {
@@ -41,7 +37,7 @@ body {
     padding: 0 20px; /* Added padding here for general content spacing */
 }
 
-/* Header */
+/* Header - tudo certo*/ 
 header {
     background-color: var(--rosa-principal);
     color: white;
@@ -51,9 +47,9 @@ header {
     font-size: 1.2em;
 }
 
-/* Navegação */
+/* Navegação - tudo certo */ 
 nav {
-    background-color: var(--rosa-escuro);
+    background-color: var(--white);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -74,7 +70,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--rosa-principal);
     text-decoration: none;
     font-weight: bold;
     padding: 8px 15px;
@@ -83,7 +79,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--rosa-principal);
+    background-color: var(--border-color);
     transform: scale(1.05);
 }
 
@@ -118,14 +114,14 @@ nav ul li a:hover {
 .main-content {
     flex: 3;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--white);
     min-width: 300px;
 }
 
-.sidebar {
+.sidebar { 
     flex: 1;
     padding: 20px;
-    background-color: var(--rosa-claro);
+    background-color: var(--border-color);
     min-width: 250px;
 }
 
@@ -146,7 +142,7 @@ nav ul li a:hover {
     border-radius: 8px;
     padding: 15px;
     transition: transform 0.3s;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .product-card:hover {
@@ -163,7 +159,7 @@ nav ul li a:hover {
 
 .product-card h3 {
     margin: 10px 0 5px;
-    color: var(--rosa-escuro);
+    color: var(--rosa-principal);
 }
 
 .product-card .price {
@@ -194,8 +190,8 @@ nav ul li a:hover {
 }
 
 /* Seção principal das vantagens */
-.vantagens-mylily {
-    background-color: #E6007A; /* Cor de fundo rosa vibrante da seção */
+.vantagens-mylicy { 
+    background-color: var(--rosa-principal); /* Cor de fundo rosa vibrante da seção */
     padding: 50px 0; /* Espaçamento interno superior e inferior ligeiramente diminuído */
     color: #fff; /* Cor do texto dentro desta seção */
     border-radius: 10px; /* Cantos arredondados na seção principal */
@@ -203,7 +199,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-.vantagens-mylily h2 {
+.vantagens-mylicy h2 {
     font-size: 2.2em; /* Tamanho do título ligeiramente diminuído */
     margin-bottom: 30px; /* Espaçamento abaixo do título ligeiramente diminuído */
     text-align: left; /* Alinha o título à esquerda, como na imagem */
@@ -241,7 +237,7 @@ nav ul li a:hover {
 
 /* Estilo da caixa do ícone */
 .icon-box {
-    background-color: #F8D9E7; /* Fundo rosa claro para a caixa do ícone */
+    background-color: var(--border-color); /* Fundo rosa claro para a caixa do ícone */
     width: 70px; /* Largura ligeiramente diminuída */
     height: 70px; /* Altura ligeiramente diminuída */
     border-radius: 50%; /* Faz a caixa do ícone ser circular */
@@ -252,13 +248,13 @@ nav ul li a:hover {
 }
 
 .icon-box i {
-    color: #E6007A; /* Cor rosa vibrante para os ícones */
+    color: var(--rosa-principal); /* Cor rosa vibrante para os ícones */
     font-size: 2.5em; /* Tamanho dos ícones ligeiramente diminuído */
 }
 
 /* Estilo do título do item */
 .vantagem-item h3 {
-    color: #E6007A; /* Cor rosa vibrante para os títulos dos cards */
+    color: var(--rosa-principal); /* Cor rosa vibrante para os títulos dos cards */
     font-size: 1.3em; /* Tamanho do título do item ligeiramente diminuído */
     margin-top: 0;
     margin-bottom: 8px; /* Espaçamento abaixo do título do item ligeiramente diminuído */
@@ -267,7 +263,7 @@ nav ul li a:hover {
 
 /* Estilo do parágrafo do item */
 .vantagem-item p {
-    color: #555; /* Cor de texto mais escura para o parágrafo */
+    color: var(--text-color); /* Cor de texto mais escura para o parágrafo */
     font-size: 0.9em; /* Tamanho da fonte do parágrafo ligeiramente diminuído */
     line-height: 1.5;
     margin-bottom: 0; /* Remove margem inferior padrão */
@@ -275,7 +271,7 @@ nav ul li a:hover {
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
-    .vantagens-mylily h2 {
+    .vantagens-mylicy h2 {
         font-size: 1.8em; /* Tamanho do título em telas menores ligeiramente diminuído */
         text-align: center; /* Centraliza o título em telas menores */
         padding-left: 0;
@@ -306,7 +302,7 @@ nav ul li a:hover {
 
 .testimonials-header h2 {
     font-size: 2.5em;
-    color: var(--primary-pink);
+    color: var(--rosa-principal);
     font-weight: 700;
     text-align: center; /* Garante que o título esteja centralizado */
     margin-bottom: 0; /* Remove margem extra se houver */
@@ -323,7 +319,7 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: var(--primary-pink);
+    background-color: var(--rosa-principal);
     color: var(--white);
     border: none;
     padding: 12px 25px;
@@ -337,7 +333,7 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #C2185B;
+    background-color: var(--rosa-principal);
 }
 
 .carousel-nav {
@@ -347,8 +343,8 @@ nav ul li a:hover {
 
 .nav-arrow {
     background-color: var(--white);
-    border: 1px solid var(--primary-pink);
-    color: var(--primary-pink);
+    border: 1px solid var(--rosa-principal);
+    color: var(--rosa-principal);
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -361,7 +357,7 @@ nav ul li a:hover {
 }
 
 .nav-arrow:hover {
-    background-color: var(--primary-pink);
+    background-color: var(--rosa-principal);
     color: var(--white);
 }
 
@@ -430,7 +426,7 @@ nav ul li a:hover {
 
 /* Card de Resumo */
 .summary-card {
-    background-color: var(--primary-pink);
+    background-color: var(--rosa-principal);
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -493,7 +489,7 @@ nav ul li a:hover {
 .reviewer-avatar {
     width: 35px;
     height: 35px;
-    background-color: var(--primary-pink);
+    background-color: var(--rosa-principal);
     border-radius: 50%;
     flex-shrink: 0;
 }
@@ -541,7 +537,7 @@ nav ul li a:hover {
 }
 
 .about-column ul li a {
-    color: var(--rosa-escuro);
+    color: var(--rosa-principal);
     text-decoration: none;
 }
 
@@ -551,7 +547,7 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--rosa-escuro);
+    background-color: var(--rosa-principal);
     color: white;
     padding: 40px 20px;
     display: flex;
