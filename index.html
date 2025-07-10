@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Licy - Moda Plus Size</title>
+
+    <!-- Links para fontes e ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones de Estrela - Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link para o arquivo de estilos CSS. Certifique-se de que 'style.css' está na mesma pasta que este HTML. -->
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
         FRETE GRÁTIS PARA TODO O BRASIL!
     </header>
-    
+
     <nav>
         <ul>
             <li><a href="#">Página Inicial</a></li>
@@ -20,12 +29,12 @@
             <li><a href="#">Sobre Nós</a></li>
         </ul>
     </nav>
-    
+
     <div class="hero">
         <h1>#FOTO</h1>
         <p>Seu corpo, seu estilo, sua potência.</p>
     </div>
-    
+
     <div class="content">
         <aside class="sidebar">
             <h2>Promoções</h2>
@@ -42,20 +51,20 @@
                 <a href="#" class="btn">Ver ofertas</a>
             </div>
         </aside>
-        
+
         <main class="main-content">
             <h2>Nossos Produtos</h2>
             <div class="products" id="products-container">
                 <!-- Produtos serão carregados via JavaScript -->
             </div>
-            
+
             <div class="kits-promo">
                 <h3>Combinadinhos pra você</h3>
                 <p>Kits e conjuntos com preços especiais</p>
             </div>
         </main>
     </div>
-    
+
     <section class="advantages">
         <h2>Vantagens de My Licy</h2>
         <div class="advantages-grid">
@@ -73,28 +82,132 @@
             </div>
         </div>
     </section>
-    
-    <section class="testimonials">
-        <h2>Depoimentos</h2>
-        <div class="testimonials-header">
-            <a href="#" class="view-all">Ver todos (2001 feedbacks)</a>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Depoimentos</h2>
+                <div class="header-controls">
+                    <button class="btn-primary">Ver todos</button>
+                    <div class="carousel-nav">
+                        <button class="nav-arrow prev-arrow">&leftarrow;</button>
+                        <button class="nav-arrow next-arrow">&rightarrow;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-carousel-container">
+                <div class="testimonials-carousel-track">
+                    <!--Card de resumo e avaliações-->
+                    <div class="testimonial-card summary-card">
+                        <div class="rating-overall">
+                            <span>4,8</span>/5
+                        </div>
+
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="feedback-count"> 200 feedback</p>
+                    </div>
+
+                    <!--depoimento 1-->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Entrega rápida e muito bem embalado! Amei tudo, com certeza comprarei mais vezes.</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar"></div>
+                            <span>Samantha R.</span>
+                            <span class="review-date">Fev 4, 2025</span>
+                        </div>
+                    </div>
+
+                    <!--depoimento 2-->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Achei que não fosse chegar a tempo da minha festa mas veio super rápido! Todo mundo perguntando onde comprei, foi um sucesso.</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar"></div>
+                            <span>Karina L.</span>
+                            <span class="review-date">Fev 1, 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Achei minha loja favorita de roupas por um bom preço! Nunca me senti tão linda usando elas.</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar"></div>
+                            <span>Ana S.</span>
+                            <span class="review-date">Jan 10, 2025</span>
+                        </div>
+                    </div>
+
+                       <!-- Depoimento 4 -->
+                       <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">O suporte da loja foi muito atencioso e perfeito. A entrega foi rápida e o produto excelente. Gostei muito!</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar"></div>
+                            <span>Nadia P.</span>
+                            <span class="review-date">Jan 26, 2025</span>
+                        </div>
+                    </div>
+
+                      <!-- Adicione mais depoimentos conforme necessário para testar o carrossel -->
+                      <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Produto de ótima qualidade e chegou super rápido! Recomendo a todos que procuram algo especial.</p>
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar"></div>
+                            <span>Lucas M.</span>
+                            <span class="review-date">Mar 1, 2025</span>
+                        </div>
+                </div>
+            </div>
+
         </div>
-        
-        <div class="testimonial-card">
-            <div class="rating">★★★★★</div>
-            <p>"Entregaram antes do prazo e tudo veio perfeito, com certeza comprarei mais vezes."</p>
-        </div>
-        
-        <div class="testimonial-card">
-            <div class="rating">★★★★☆</div>
-            <p>"Achei que não chegaria a tempo, mas veio super rápido. Foi um sucesso!"</p>
-        </div>
+
     </section>
-    
+
     <section id="about">
         <h2>Sobre Nós</h2>
         <p class="about-text">My Licy é marca feita para mulheres reais e confiantes. Acreditamos que estilo, conforto e autoestima não têm tamanho. Por isso, criamos roupas que valorizam cada curva, com design atual, caimento impecável e personalidade. Mais do que moda, celebramos a liberdade de se vestir como quiser.</p>
-        
+
         <div class="about-grid">
             <div class="about-column">
                 <h3>Ajuda</h3>
@@ -114,13 +227,13 @@
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="footer-section">
             <h3>Sobre Nós</h3>
             <p>Somos uma loja especializada em moda feminina com os melhores preços e qualidade.</p>
         </div>
-        
+
         <div class="footer-section">
             <h3>Ajuda</h3>
             <ul>
@@ -129,7 +242,7 @@
                 <li><a href="#">Formas de pagamento</a></li>
             </ul>
         </div>
-        
+
         <div class="footer-section">
             <h3>Contato</h3>
             <ul>
@@ -140,6 +253,7 @@
         </div>
     </footer>
 
+    <!-- Link para o arquivo de script JavaScript. Certifique-se de que 'script.js' está na mesma pasta que este HTML. -->
     <script src="app.js"></script>
 </body>
 </html>
