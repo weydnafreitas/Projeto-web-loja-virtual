@@ -83,24 +83,27 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Hero Section */
-.hero {
-    background-color: var(--rosa-suave);
-    text-align: center;
-    padding: 40px 20px;
-    margin-bottom: 30px;
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
 }
 
-.hero h1 {
-    color: var(--rosa-escuro);
-    font-size: 2.5em;
-    margin-bottom: 10px;
+.carrossel-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto;
+.carrossel-img.ativo {
+  opacity: 1;
+  z-index: 1;
 }
 
 /* Conteúdo Principal */

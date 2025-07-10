@@ -30,6 +30,17 @@ const products = [
     }
 ];
 
+//Carrossel
+  const imagens = document.querySelectorAll('.carrossel-img');
+  let index = 0;
+
+  setInterval(() => {
+    imagens[index].classList.remove('ativo');
+    index = (index + 1) % imagens.length;
+    imagens[index].classList.add('ativo');
+  }, 3000);
+
+
 // Carrinho de compras
 let cart = [];
 
