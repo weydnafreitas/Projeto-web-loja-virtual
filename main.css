@@ -432,7 +432,7 @@ nav ul li a:hover {
     min-width: 320px;
     flex: 0 0 calc(25% - 20px);
     margin-right: 20px;
-    background-color: var(--light-pink);
+    background-color: #f5f5f5f5;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
