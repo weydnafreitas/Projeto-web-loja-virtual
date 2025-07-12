@@ -1,94 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <header>
-        FRETE GRÁTIS PARA TODO O BRASIL!
-    </header>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>FRETE GRÁTIS PARA TODO O BRASIL!</header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="produtos.html">Nossos Produtos</a></li>
-            <li><a href="promoções.html">Promoções</a></li>
-            <li><a href="">Contato</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="produtos.html">Nossos Produtos</a></li>
+        <li><a href="promoções.html">Promoções</a></li>
+        <li><a href="">Contato</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <!--carrinho de compras-->
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+      </ul>
     </nav>
 
     <main class="container">
-        <section class="our-products">
-            <h2>Nossos Produtos</h2>
-            <div class="product-grid">
-                <!-- Product Card 1 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+1" alt="Imagem do Produto 1">
-                    <div class="category">FEMININO / Calça Slim</div>
-                    <div class="name">MARQUIP Macacão</div>
-                    <div class="old-price">R$ 190,00</div>
-                    <div class="price">R$ 100,00</div>
-                    <button class="buy-btn">Adicionar ao carrinho</button>
-                </div>
-                <!-- Product Card 2 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+2" alt="Imagem do Produto 2">
-                    <div class="category">FEMININO / Calça Slim</div>
-                    <div class="name">MARQUIP Macacão</div>
-                    <div class="old-price">R$ 190,00</div>
-                    <div class="price">R$ 100,00</div>
-                    <button class="buy-btn">Adicionar ao carrinho</button>
-                </div>
-                <!-- Product Card 3 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+3" alt="Imagem do Produto 3">
-                    <div class="category">FEMININO / Vestidinho</div>
-                    <div class="name">EDUÇÃO Vestidinho</div>
-                    <div class="old-price">R$ 190,00</div>
-                    <div class="price">R$ 100,00</div>
-                    <button class="buy-btn">Adicionar ao carrinho</button>
-                </div>
-                <!-- Product Card 4 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+4" alt="Imagem do Produto 4">
-                    <div class="category">MASCULINO / Camisa</div>
-                    <div class="name">CAMISA Casual</div>
-                    <div class="old-price">R$ 120,00</div>
-                    <div class="price">R$ 75,00</div>
-                    <button class="buy-btn">Adicionar ao carrinho</button>
-                </div>
-                <!-- Product Card 5 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+5" alt="Imagem do Produto 5">
-                    <div class="category">FEMININO / Saia</div>
-                    <div class="name">SAIA Plissada</div>
-                    <div class="old-price">R$ 150,00</div>
-                    <div class="price">R$ 90,00</div>
-                    <button class="buy-btn">Adicionar ao carrinho</button>
-                </div>
-                <!-- Product Card 6 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6" alt="Imagem do Produto 6">
-                    <div class="category">INFANTIL / Conjunto</div>
-                    <div class="name">CONJUNTO Infantil</div>
-                    <div class="old-price">R$ 80,00</div>
-                    <div class="price">R$ 50,00</div>
-                    <button class="buy-btn">Adicionar ao carrinho</button>
-                </div>
-
-                
-            </div>
-        </section>
+      <section class="our-products">
+        <h2>Nossos Produtos</h2>
+        <div class="product-grid">
+          <!-- Product Card 1 -->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+1"
+              alt="Imagem do Produto 1"
+            />
+            <div class="category">FEMININO / Calça Slim</div>
+            <div class="name">MARQUIP Macacão</div>
+            <div class="old-price">R$ 190,00</div>
+            <div class="price">R$ 100,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <!-- Product Card 2 -->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+2"
+              alt="Imagem do Produto 2"
+            />
+            <div class="category">FEMININO / Calça Slim</div>
+            <div class="name">MARQUIP Macacão</div>
+            <div class="old-price">R$ 190,00</div>
+            <div class="price">R$ 100,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+3"
+              alt="Imagem do Produto 3"
+            />
+            <div class="category">FEMININO / Vestidinho</div>
+            <div class="name">EDUÇÃO Vestidinho</div>
+            <div class="old-price">R$ 190,00</div>
+            <div class="price">R$ 100,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <!-- Product Card 4 -->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+4"
+              alt="Imagem do Produto 4"
+            />
+            <div class="category">MASCULINO / Camisa</div>
+            <div class="name">CAMISA Casual</div>
+            <div class="old-price">R$ 120,00</div>
+            <div class="price">R$ 75,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <!-- Product Card 5 -->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+5"
+              alt="Imagem do Produto 5"
+            />
+            <div class="category">FEMININO / Saia</div>
+            <div class="name">SAIA Plissada</div>
+            <div class="old-price">R$ 150,00</div>
+            <div class="price">R$ 90,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <!-- Product Card 6 -->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 6"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <!--Product Card 7-->
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 7"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 8"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 9"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 10"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 11"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 12"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 13"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 14"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 15"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 16"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 17"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 18"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 19"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 20"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 21"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 22"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 23"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 24"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 25"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 26"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 27"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6"
+              alt="Imagem do Produto 28"
+            />
+            <div class="category">INFANTIL / Conjunto</div>
+            <div class="name">CONJUNTO Infantil</div>
+            <div class="old-price">R$ 80,00</div>
+            <div class="price">R$ 50,00</div>
+            <button class="buy-btn">Adicionar ao carrinho</button>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+
+    <footer>
+      <div class="footer-section">
+        <h3>Sobre Nós</h3>
+        <p>
+          My Licy é marca feita para mulheres reais e confiantes. Acreditamos
+          que estilo, conforto e autoestima não têm tamanho. Por isso, criamos
+          roupas que valorizam cada curva, com design atual, caimento impecável
+          e personalidade. Mais do que moda, celebramos a liberdade de se vestir
+          como quiser.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Ajuda</h3>
+        <ul>
+          <li><a href="#">Dúvidas frequentes</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Formas de pagamento</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 id="contatos">Contato</h3>
+        <ul>
+          <li>Email: contato@modarosa.com</li>
+          <li><a href="#">Whatsapp: Clique aqui!</a></li>
+          <li>Horário: Seg-Sab, 08h-17:30h | Dom, 8h-12:00h</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>

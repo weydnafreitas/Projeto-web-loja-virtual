@@ -687,3 +687,17 @@ footer {
         margin: 0 auto; /* Center single column cards */
     }
 }
+
+
+/* Estilos do Ícone de Carrinho */
+.cart-icon {
+    font-size: 24px; /* Tamanho do ícone */
+    color: var(--rosa-principal); /* Cor do ícone */
+    margin-left: 20px; /* Espaçamento à esquerda do ícone */
+    transition: color 0.3s ease, transform 0.2s ease; /* Transição suave para hover */
+}
+
+.cart-icon:hover {
+    color: var(--rosa-escuro); /* Cor ao passar o mouse */
+    transform: translateY(-1px); /* Efeito de "levantar" sutil */
+}
