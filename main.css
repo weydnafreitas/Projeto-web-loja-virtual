@@ -647,6 +647,23 @@
       background-color: var(--rosa-escuro); /* Cor de hover do botão */
   }
   
+  /*Pagina das dúvidas frequentes*/
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .faq {
+      margin-bottom: 30px;
+    }
+    .faq p {
+      margin: 0 0 20px 0;
+      line-height: 1.6;
+    }
+
+    /*Pagina das trocas e devoluções*/
+    
+    
   /* Ajustes de Responsividade para Produtos */
   @media (max-width: 1024px) { /* Para telas de desktop menores e tablets grandes */
       .product-grid {
