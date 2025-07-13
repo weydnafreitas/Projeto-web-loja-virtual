@@ -273,7 +273,3 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupTestimonialCarousel(); // Chama a função para inicializar o carrossel
 });
-
-
-
-

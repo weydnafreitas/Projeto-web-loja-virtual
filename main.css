@@ -112,10 +112,9 @@
   }
   
   .sidebar { 
-      flex: 1;
+    flex: 1;
       padding: 20px;
       background-color: var(--border-color);
-      min-width: 250px;
   }
   
   .promo-item {
@@ -125,9 +124,9 @@
   /* Produtos */
   .products { /* Esta classe parece ser um contêiner para a seção de produtos */
       /* Removido display: grid daqui para evitar duplicação com .our-products .product-grid */
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
-      margin-top: 20px;
   }
   
   .product-card {
@@ -136,6 +135,8 @@
       padding: 15px;
       transition: transform 0.3s;
       background-color: var(--white);
+      width: 100%;
+      max-width: 300px;
   }
   
   .product-card:hover {
@@ -193,6 +194,8 @@
       text-align: left; /* Alinha o título à esquerda, como na imagem */
       padding-left: 15px; /* Alinha com o conteúdo do container ligeiramente diminuído */
       font-weight: 700; /* Negrito para o título */
+      color: black;
+      text-align: center;
   }
   
   /* Grid para os itens de vantagem */
@@ -550,7 +553,7 @@
       }
   }
   
-  /*Pagina dos produtos*/
+  
   
   /* Our Products Section */
   .our-products {
@@ -647,12 +650,8 @@
       background-color: var(--rosa-escuro); /* Cor de hover do botão */
   }
   
-  /*Pagina das dúvidas frequentes*/
-    main {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+ 
+    
     .faq {
       margin-bottom: 30px;
     }
@@ -661,7 +660,7 @@
       line-height: 1.6;
     }
 
-    /*Pagina das trocas e devoluções*/
+  
     
     
   /* Ajustes de Responsividade para Produtos */
@@ -707,10 +706,7 @@
   
   /* Contêiner da seção de contato (mantido para a estrutura específica desta seção) */
   .container {
-      display: flex;
-      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
-      justify-content: center; /* Centraliza os itens horizontalmente */
-      gap: 40px; /* Espaço entre as colunas */
+     
       max-width: 1200px; /* Largura máxima do contêiner */
       margin: 50px auto; /* Centraliza o contêiner na página vertical e horizontalmente */
       padding: 30px;
@@ -813,4 +809,3 @@
           min-width: unset; /* Remove a largura mínima */
       }
   }
-  
