@@ -31,14 +31,12 @@ const homePageProducts = [
 ];
 
 // Dados dos produtos para a página 'Nossos Produtos'
-// IMPORTANTE: Certifique-se de que os IDs aqui são ÚNICOS e não se sobrepõem
-// aos IDs dos produtos da página inicial.
 const allProducts = [
     {
-        id: 5, // Começa do ID 5 para não conflitar com os da página inicial
+        id: 5,
         name: "MARQUIP Macacão (Calça Slim)",
         price: 100.00,
-        oldPrice: 190.00, // Adicionado oldPrice para exibição
+        oldPrice: 190.00,
         image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+1",
         category: "FEMININO / Calça Slim"
     },
@@ -260,12 +258,240 @@ const allProducts = [
     }
 ];
 
+// Dados dos produtos para a página de Promoções (NOVO ARRAY)
+const promotionsProducts = [
+    {
+        id: 33, // IDs únicos para a página de promoções
+        name: "Vestido Floral Verão",
+        price: 89.99,
+        oldPrice: 150.00,
+        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+1",
+        category: "FEMININO / Vestido"
+    },
+    {
+        id: 34,
+        name: "Calça Jeans Conforto",
+        price: 75.00,
+        oldPrice: 130.00,
+        image: "https://placehold.co/200x200/FFC0CB/FFFFFF?text=Promocao+2",
+        category: "FEMININO / Calça"
+    },
+    {
+        id: 35,
+        name: "Blusa de Malha Leve",
+        price: 49.99,
+        oldPrice: 90.00,
+        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+3",
+        category: "FEMININO / Blusa"
+    },
+    {
+        id: 36,
+        name: "Conjunto Fitness",
+        price: 110.00,
+        oldPrice: 180.00,
+        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+4",
+        category: "FEMININO / Fitness"
+    },
+    {
+        id: 37,
+        name: "Saia Midi Plissada",
+        price: 65.00,
+        oldPrice: 110.00,
+        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+5",
+        category: "FEMININO / Saia"
+    },
+    {
+        id: 38,
+        name: "Macacão Casual",
+        price: 95.00,
+        oldPrice: 160.00,
+        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+6",
+        category: "FEMININO / Macacão"
+    },
+    {
+        id: 39,
+        name: "Short Jeans Despojado",
+        price: 55.00,
+        oldPrice: 95.00,
+        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+7",
+        category: "FEMININO / Short"
+    },
+    {
+        id: 40,
+        name: "Blazer Elegante",
+        price: 140.00,
+        oldPrice: 220.00,
+        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+8",
+        category: "FEMININO / Casaco"
+    },
+    {
+        id: 41,
+        name: "Vestido de Festa",
+        price: 180.00,
+        oldPrice: 300.00,
+        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+9",
+        category: "FEMININO / Vestido"
+    },
+    {
+        id: 42,
+        name: "Camiseta Básica Algodão",
+        price: 35.00,
+        oldPrice: 60.00,
+        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+10",
+        category: "FEMININO / Camiseta"
+    },
+    {
+        id: 43,
+        name: "Jaqueta Jeans Clássica",
+        price: 120.00,
+        oldPrice: 200.00,
+        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+11",
+        category: "FEMININO / Jaqueta"
+    },
+    {
+        id: 44,
+        name: "Body Renda",
+        price: 60.00,
+        oldPrice: 100.00,
+        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+12",
+        category: "FEMININO / Body"
+    },
+    {
+        id: 45,
+        name: "Saída de Praia",
+        price: 70.00,
+        oldPrice: 120.00,
+        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+13",
+        category: "FEMININO / Praia"
+    },
+    {
+        id: 46,
+        name: "Macaquinho Estampado",
+        price: 80.00,
+        oldPrice: 140.00,
+        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+14",
+        category: "FEMININO / Macaquinho"
+    },
+    {
+        id: 47,
+        name: "Moletom Confortável",
+        price: 90.00,
+        oldPrice: 150.00,
+        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+15",
+        category: "UNISSEX / Moletom"
+    },
+    {
+        id: 48,
+        name: "Legging Esportiva",
+        price: 50.00,
+        oldPrice: 85.00,
+        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+16",
+        category: "FEMININO / Legging"
+    },
+    {
+        id: 49,
+        name: "Camisa Social Feminina",
+        price: 70.00,
+        oldPrice: 120.00,
+        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+17",
+        category: "FEMININO / Camisa"
+    },
+    {
+        id: 50,
+        name: "Bermuda Jeans",
+        price: 60.00,
+        oldPrice: 100.00,
+        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+18",
+        category: "FEMININO / Bermuda"
+    },
+    {
+        id: 51,
+        name: "Top Cropped",
+        price: 40.00,
+        oldPrice: 70.00,
+        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+19",
+        category: "FEMININO / Top"
+    },
+    {
+        id: 52,
+        name: "Cardigã Leve",
+        price: 75.00,
+        oldPrice: 130.00,
+        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+20",
+        category: "FEMININO / Casaco"
+    },
+    {
+        id: 53,
+        name: "Vestido Tubinho",
+        price: 85.00,
+        oldPrice: 140.00,
+        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+21",
+        category: "FEMININO / Vestido"
+    },
+    {
+        id: 54,
+        name: "Macacão Pantacourt",
+        price: 105.00,
+        oldPrice: 170.00,
+        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+22",
+        category: "FEMININO / Macacão"
+    },
+    {
+        id: 55,
+        name: "Short Alfaiataria",
+        price: 68.00,
+        oldPrice: 115.00,
+        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+23",
+        category: "FEMININO / Short"
+    },
+    {
+        id: 56,
+        name: "Blusa Ciganinha",
+        price: 52.00,
+        oldPrice: 90.00,
+        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+24",
+        category: "FEMININO / Blusa"
+    },
+    {
+        id: 57,
+        name: "Conjunto de Lingerie",
+        price: 78.00,
+        oldPrice: 130.00,
+        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+25",
+        category: "FEMININO / Lingerie"
+    },
+    {
+        id: 58,
+        name: "Calça Pantalona",
+        price: 92.00,
+        oldPrice: 155.00,
+        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+26",
+        category: "FEMININO / Calça"
+    },
+    {
+        id: 59,
+        name: "Body Manga Longa",
+        price: 65.00,
+        oldPrice: 110.00,
+        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+27",
+        category: "FEMININO / Body"
+    },
+    {
+        id: 60,
+        name: "Saia Lápis",
+        price: 58.00,
+        oldPrice: 98.00,
+        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+28",
+        category: "FEMININO / Saia"
+    }
+];
+
 
 // Carrossel
 const imagens = document.querySelectorAll('.carrossel-img');
 let index = 0;
 
-if (imagens.length > 0) { // Adiciona uma verificação para garantir que as imagens do carrossel existam na página
+if (imagens.length > 0) {
   setInterval(() => {
     imagens[index].classList.remove('ativo');
     index = (index + 1) % imagens.length;
@@ -278,7 +504,6 @@ if (imagens.length > 0) { // Adiciona uma verificação para garantir que as ima
 let cart = [];
 
 // Função para carregar produtos na página
-// Agora aceita um array de produtos e o ID do contêiner onde devem ser carregados
 function loadProducts(productsArray, containerId) {
     const productsContainer = document.getElementById(containerId);
 
@@ -303,18 +528,19 @@ function loadProducts(productsArray, containerId) {
         productsContainer.appendChild(productCard);
     });
 
-    // Adiciona eventos aos botões dentro do contêiner específico
     productsContainer.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', addToCart);
     });
 }
 
 // Função para adicionar produto ao carrinho
-// Procura o produto tanto no array de produtos da página inicial quanto no array de todos os produtos
 function addToCart(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
 
-    const product = homePageProducts.find(p => p.id === productId) || allProducts.find(p => p.id === productId);
+    // Procura o produto em TODOS os arrays de produtos
+    const product = homePageProducts.find(p => p.id === productId) ||
+                    allProducts.find(p => p.id === productId) ||
+                    promotionsProducts.find(p => p.id === productId); // Busca também em promotionsProducts
 
     if (!product) {
         console.error('Produto não encontrado:', productId);
@@ -339,7 +565,7 @@ function addToCart(event) {
 // Função para atualizar o contador do carrinho
 function updateCartCount() {
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-    const cartCountElement = document.querySelector('.cart-icon .cart-count'); // Elemento span que você adicionou
+    const cartCountElement = document.querySelector('.cart-icon .cart-count');
     if (cartCountElement) {
         cartCountElement.textContent = cartCount;
     }
@@ -360,24 +586,22 @@ function showNotification(message) {
     notification.style.borderRadius = '5px';
     notification.style.zIndex = '1000';
     notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-    notification.style.opacity = '0'; // Começa invisível
-    notification.style.transition = 'opacity 0.5s ease-in-out'; // Transição suave
+    notification.style.opacity = '0';
+    notification.style.transition = 'opacity 0.5s ease-in-out';
 
     document.body.appendChild(notification);
 
-    // Fade in
     setTimeout(() => {
         notification.style.opacity = '1';
-    }, 10); // Pequeno atraso para permitir que o elemento seja renderizado antes da transição
+    }, 10);
 
-    // Fade out e remoção
     setTimeout(() => {
         notification.style.opacity = '0';
         setTimeout(() => {
-            if (notification.parentNode) { // Verifica se ainda existe antes de tentar remover
+            if (notification.parentNode) {
                 document.body.removeChild(notification);
             }
-        }, 500); // Espera a transição de fade-out
+        }, 500);
     }, 3000);
 }
 
@@ -390,7 +614,7 @@ function setupMobileMenu() {
     }
 
     let menuToggle = document.querySelector('.menu-toggle');
-    if (!menuToggle) { // Cria apenas se não existir
+    if (!menuToggle) {
         menuToggle = document.createElement('button');
         menuToggle.className = 'menu-toggle';
         menuToggle.innerHTML = '☰ Menu';
@@ -422,16 +646,16 @@ function setupMobileMenu() {
         if (ul) {
             if (window.innerWidth <= 768) {
                 menuToggle.style.display = 'block';
-                ul.style.display = 'none'; // Esconde o menu em telas pequenas por padrão
+                ul.style.display = 'none';
             } else {
                 menuToggle.style.display = 'none';
-                ul.style.display = 'flex'; // Mostra o menu em telas maiores
+                ul.style.display = 'flex';
             }
         }
     }
 
     window.addEventListener('resize', checkScreenSize);
-    checkScreenSize(); // Chama na inicialização para definir o estado correto
+    checkScreenSize();
 }
 
 // Lógica do Carrossel de Depoimentos
@@ -447,42 +671,36 @@ function setupTestimonialCarousel() {
     }
 
     let currentIndex = 0;
-    let cardWidth = 0; // Largura de um cartão incluindo a margem
-    let visibleCards = 0; // Quantos cards são visíveis por vez
+    let cardWidth = 0;
+    let visibleCards = 0;
 
     function updateCarouselPosition() {
-        if (cardWidth === 0 || visibleCards === 0) return; // Garante que os valores foram calculados
-
-        // Calcula a posição de rolagem baseada no índice atual e na largura do cartão
+        if (cardWidth === 0 || visibleCards === 0) return;
         const newPosition = -currentIndex * cardWidth;
         carouselTrack.style.transform = `translateX(${newPosition}px)`;
     }
 
     function calculateCardMetrics() {
         if (testimonialCards.length > 0) {
-            // Obter a largura computada de um cartão e sua margem direita
             const cardStyle = window.getComputedStyle(testimonialCards[0]);
             const cardMarginRight = parseFloat(cardStyle.marginRight);
-            const cardClientWidth = testimonialCards[0].offsetWidth; // Largura do elemento sem margem
+            const cardClientWidth = testimonialCards[0].offsetWidth;
 
             cardWidth = cardClientWidth + cardMarginRight;
 
-            // Determinar quantos cards são visíveis
             const containerWidth = document.querySelector('.testimonials-carousel-container').offsetWidth;
             visibleCards = Math.floor(containerWidth / cardWidth);
 
-            // Ajustar o currentIndex para não ir além do limite de cards visíveis
             const maxIndex = testimonialCards.length - visibleCards;
             if (currentIndex > maxIndex) {
                 currentIndex = maxIndex > 0 ? maxIndex : 0;
             }
-             // Se não há cartões suficientes para rolar, desabilitar as setas
             if (testimonialCards.length <= visibleCards) {
                 prevArrow.style.display = 'none';
                 nextArrow.style.display = 'none';
             } else {
-                prevArrow.style.display = ''; // Volta ao padrão
-                nextArrow.style.display = ''; // Volta ao padrão
+                prevArrow.style.display = '';
+                nextArrow.style.display = '';
             }
         }
         updateCarouselPosition();
@@ -490,51 +708,51 @@ function setupTestimonialCarousel() {
 
     function slideNext() {
         const maxIndex = testimonialCards.length - visibleCards;
-        if (maxIndex <= 0) return; // Não slide se não houver cards suficientes para rolar
+        if (maxIndex <= 0) return;
 
         if (currentIndex < maxIndex) {
             currentIndex++;
         } else {
-            currentIndex = 0; // Volta para o início se estiver no final (loop)
+            currentIndex = 0;
         }
         updateCarouselPosition();
     }
 
     function slidePrev() {
         const maxIndex = testimonialCards.length - visibleCards;
-        if (maxIndex <= 0) return; // Não slide se não houver cards suficientes para rolar
+        if (maxIndex <= 0) return;
 
         if (currentIndex > 0) {
             currentIndex--;
         } else {
-            currentIndex = maxIndex; // Vai para o final se estiver no início (loop)
+            currentIndex = maxIndex;
         }
         updateCarouselPosition();
     }
 
-    // Event Listeners para os botões de navegação
     nextArrow.addEventListener('click', slideNext);
     prevArrow.addEventListener('click', slidePrev);
 
-    // Recalcular métricas quando a janela for redimensionada
     window.addEventListener('resize', calculateCardMetrics);
-
-    // Calcular as métricas iniciais quando a página carrega
-    // Usamos setTimeout para garantir que todos os estilos e larguras foram computados
     setTimeout(calculateCardMetrics, 100);
 }
 
 
 // Quando o DOM estiver carregado, inicializa as funções
 document.addEventListener('DOMContentLoaded', () => {
-    // Carrega os produtos da página inicial APENAS na página inicial
+    // Carrega os produtos da página inicial
     if (document.getElementById('products-container')) {
         loadProducts(homePageProducts, 'products-container');
     }
 
-    // Carrega os produtos da página de "Nossos Produtos" APENAS na página de produtos
+    // Carrega os produtos da página de "Nossos Produtos"
     if (document.getElementById('all-products-grid')) {
         loadProducts(allProducts, 'all-products-grid');
+    }
+
+    // Carrega os produtos da página de "Promoções"
+    if (document.getElementById('promotions-grid')) {
+        loadProducts(promotionsProducts, 'promotions-grid');
     }
 
     setupMobileMenu();
