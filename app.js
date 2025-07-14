@@ -1,5 +1,5 @@
 // Dados dos produtos da página inicial
-const products = [
+const homePageProducts = [
     {
         id: 1,
         name: "Macaquinho Short Saia",
@@ -30,51 +30,296 @@ const products = [
     }
 ];
 
-//Carrossel
-  const imagens = document.querySelectorAll('.carrossel-img');
-  let index = 0;
+// Dados dos produtos para a página 'Nossos Produtos'
+// IMPORTANTE: Certifique-se de que os IDs aqui são ÚNICOS e não se sobrepõem
+// aos IDs dos produtos da página inicial.
+const allProducts = [
+    {
+        id: 5, // Começa do ID 5 para não conflitar com os da página inicial
+        name: "MARQUIP Macacão (Calça Slim)",
+        price: 100.00,
+        oldPrice: 190.00, // Adicionado oldPrice para exibição
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+1",
+        category: "FEMININO / Calça Slim"
+    },
+    {
+        id: 6,
+        name: "MARQUIP Macacão (Calça Slim)",
+        price: 100.00,
+        oldPrice: 190.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+2",
+        category: "FEMININO / Calça Slim"
+    },
+    {
+        id: 7,
+        name: "EDUÇÃO Vestidinho",
+        price: 100.00,
+        oldPrice: 190.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+3",
+        category: "FEMININO / Vestidinho"
+    },
+    {
+        id: 8,
+        name: "CAMISA Casual",
+        price: 75.00,
+        oldPrice: 120.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+4",
+        category: "MASCULINO / Camisa"
+    },
+    {
+        id: 9,
+        name: "SAIA Plissada",
+        price: 90.00,
+        oldPrice: 150.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+5",
+        category: "FEMININO / Saia"
+    },
+    {
+        id: 10,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 11,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+7",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 12,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+8",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 13,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+9",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 14,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+10",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 15,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+11",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 16,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+12",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 17,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+13",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 18,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+14",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 19,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+15",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 20,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+16",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 21,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+17",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 22,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+18",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 23,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+19",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 24,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+20",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 25,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+21",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 26,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+22",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 27,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+23",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 28,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+24",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 29,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+25",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 30,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+26",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 31,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+27",
+        category: "INFANTIL / Conjunto"
+    },
+    {
+        id: 32,
+        name: "CONJUNTO Infantil",
+        price: 50.00,
+        oldPrice: 80.00,
+        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+28",
+        category: "INFANTIL / Conjunto"
+    }
+];
 
+
+// Carrossel
+const imagens = document.querySelectorAll('.carrossel-img');
+let index = 0;
+
+if (imagens.length > 0) { // Adiciona uma verificação para garantir que as imagens do carrossel existam na página
   setInterval(() => {
     imagens[index].classList.remove('ativo');
     index = (index + 1) % imagens.length;
     imagens[index].classList.add('ativo');
   }, 3000);
+}
 
 
 // Carrinho de compras
 let cart = [];
 
 // Função para carregar produtos na página
-function loadProducts() {
-    const productsContainer = document.getElementById('products-container');
+// Agora aceita um array de produtos e o ID do contêiner onde devem ser carregados
+function loadProducts(productsArray, containerId) {
+    const productsContainer = document.getElementById(containerId);
 
     if (!productsContainer) {
-        console.warn('Elemento #products-container não encontrado. Os produtos não serão carregados.');
+        console.warn(`Elemento #${containerId} não encontrado. Os produtos não serão carregados.`);
         return;
     }
 
-    products.forEach(product => {
+    productsContainer.innerHTML = ''; // Limpa o conteúdo existente antes de adicionar novos produtos
+
+    productsArray.forEach(product => {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         productCard.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
+            <div class="category">${product.category || ''}</div>
             <h3>${product.name}</h3>
+            ${product.oldPrice ? `<div class="old-price">R$ ${product.oldPrice.toFixed(2).replace('.', ',')}</div>` : ''}
             <div class="price">R$ ${product.price.toFixed(2).replace('.', ',')}</div>
             <button class="btn add-to-cart" data-id="${product.id}">Adicionar ao carrinho</button>
         `;
         productsContainer.appendChild(productCard);
     });
 
-    // Adiciona eventos aos botões
-    document.querySelectorAll('.add-to-cart').forEach(button => {
+    // Adiciona eventos aos botões dentro do contêiner específico
+    productsContainer.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', addToCart);
     });
 }
 
 // Função para adicionar produto ao carrinho
+// Procura o produto tanto no array de produtos da página inicial quanto no array de todos os produtos
 function addToCart(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
-    const product = products.find(p => p.id === productId);
+
+    const product = homePageProducts.find(p => p.id === productId) || allProducts.find(p => p.id === productId);
+
+    if (!product) {
+        console.error('Produto não encontrado:', productId);
+        return;
+    }
 
     const existingItem = cart.find(item => item.id === productId);
 
@@ -94,7 +339,10 @@ function addToCart(event) {
 // Função para atualizar o contador do carrinho
 function updateCartCount() {
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-    // Aqui você pode adicionar um elemento no DOM para mostrar o contador
+    const cartCountElement = document.querySelector('.cart-icon .cart-count'); // Elemento span que você adicionou
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+    }
     console.log(`Itens no carrinho: ${cartCount}`);
 }
 
@@ -112,15 +360,24 @@ function showNotification(message) {
     notification.style.borderRadius = '5px';
     notification.style.zIndex = '1000';
     notification.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+    notification.style.opacity = '0'; // Começa invisível
+    notification.style.transition = 'opacity 0.5s ease-in-out'; // Transição suave
 
     document.body.appendChild(notification);
 
+    // Fade in
+    setTimeout(() => {
+        notification.style.opacity = '1';
+    }, 10); // Pequeno atraso para permitir que o elemento seja renderizado antes da transição
+
+    // Fade out e remoção
     setTimeout(() => {
         notification.style.opacity = '0';
-        notification.style.transition = 'opacity 0.5s';
         setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 500);
+            if (notification.parentNode) { // Verifica se ainda existe antes de tentar remover
+                document.body.removeChild(notification);
+            }
+        }, 500); // Espera a transição de fade-out
     }, 3000);
 }
 
@@ -132,19 +389,20 @@ function setupMobileMenu() {
         return;
     }
 
-    const menuToggle = document.createElement('button');
-    menuToggle.className = 'menu-toggle';
-    menuToggle.innerHTML = '☰ Menu';
-    menuToggle.style.display = 'none';
-    menuToggle.style.background = 'var(--rosa-escuro)';
-    menuToggle.style.color = 'white';
-    menuToggle.style.border = 'none';
-    menuToggle.style.padding = '10px 15px';
-    menuToggle.style.fontSize = '1.2em';
-    menuToggle.style.cursor = 'pointer';
-
-    // Inserir o botão de toggle antes do elemento nav
-    nav.parentNode.insertBefore(menuToggle, nav);
+    let menuToggle = document.querySelector('.menu-toggle');
+    if (!menuToggle) { // Cria apenas se não existir
+        menuToggle = document.createElement('button');
+        menuToggle.className = 'menu-toggle';
+        menuToggle.innerHTML = '☰ Menu';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'var(--rosa-escuro)';
+        menuToggle.style.color = 'white';
+        menuToggle.style.border = 'none';
+        menuToggle.style.padding = '10px 15px';
+        menuToggle.style.fontSize = '1.2em';
+        menuToggle.style.cursor = 'pointer';
+        nav.parentNode.insertBefore(menuToggle, nav);
+    }
 
     function toggleMenu() {
         const ul = document.querySelector('nav ul');
@@ -184,7 +442,7 @@ function setupTestimonialCarousel() {
     const testimonialCards = document.querySelectorAll('.testimonial-card');
 
     if (!carouselTrack || !prevArrow || !nextArrow || testimonialCards.length === 0) {
-        console.warn('Elementos do carrossel não encontrados. O carrossel de depoimentos não funcionará.');
+        console.warn('Elementos do carrossel de depoimentos não encontrados. O carrossel não funcionará.');
         return;
     }
 
@@ -269,7 +527,17 @@ function setupTestimonialCarousel() {
 
 // Quando o DOM estiver carregado, inicializa as funções
 document.addEventListener('DOMContentLoaded', () => {
-    loadProducts();
+    // Carrega os produtos da página inicial APENAS na página inicial
+    if (document.getElementById('products-container')) {
+        loadProducts(homePageProducts, 'products-container');
+    }
+
+    // Carrega os produtos da página de "Nossos Produtos" APENAS na página de produtos
+    if (document.getElementById('all-products-grid')) {
+        loadProducts(allProducts, 'all-products-grid');
+    }
+
     setupMobileMenu();
-    setupTestimonialCarousel(); // Chama a função para inicializar o carrossel
+    setupTestimonialCarousel();
+    updateCartCount(); // Atualiza o contador do carrinho ao carregar a página
 });

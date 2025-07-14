@@ -10,11 +10,12 @@
     --base-font-size: 16px;
   }
   
-  /*Reset e Base*/
-    * {
+
+   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
     }
 
     body {
@@ -199,6 +200,7 @@
   
   .vantagens-mylicy h2 {
     font-size: clamp(1.8em, 5vw, 2.2em);
+    color: var(--white);
     margin-bottom: 30px; 
     text-align: center; 
     padding-left: 15px; 
@@ -597,18 +599,36 @@ font-size: 1.1em;
         transform: translateY(-1px); /* Efeito de "levantar" sutil */
     }
     
-    /* Contêiner da seção de contato (mantido para a estrutura específica desta seção) */
-    .container {
-        
-        max-width: 1200px; /* Largura máxima do contêiner */
-        margin: 50px auto; /* Centraliza o contêiner na página vertical e horizontalmente */
+    /* Contêiner da seção de contato */
+    /* NOME DA CLASSE ALTERADO PARA container-do-mapa */
+    .container-do-mapa { 
+        max-width: 1200px;
+        margin: 50px auto;
         padding: 30px;
-        background-color: var(--white); /* Fundo branco para o contêiner */
-        border-radius: 8px; /* Cantos arredondados */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        background-color: var(--white);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        
+        /* ADICIONADO PARA FLEXBOX */
+        display: flex; /* Habilita o flexbox */
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+        gap: 30px; /* Espaçamento entre as colunas */
+        align-items: flex-start; /* Alinha os itens ao topo */
     }
+
     /* Estilos para as colunas de informações de contato e formulário */
-    .contact-info, .contact-form {
+    .contact-info {
+        flex: 1; /* Permite que a coluna cresça e ocupe o espaço disponível */
+        min-width: 300px; /* Largura mínima para cada coluna antes de quebrar a linha */
+        padding: 20px;
+        /* ADICIONADO/MODIFICADO PARA ORGANIZAR CONTEÚDO INTERNO */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; /* Garante que o contact-info ocupe a altura total disponível */
+    }
+
+    .contact-form {
         flex: 1; /* Permite que as colunas cresçam e ocupem o espaço disponível */
         min-width: 300px; /* Largura mínima para cada coluna antes de quebrar a linha */
         padding: 20px;
@@ -650,6 +670,8 @@ font-size: 1.1em;
         margin-top: 20px;
         overflow: hidden; /* Garante que o mapa não transborde */
         border-radius: 5px;
+        /* ADICIONADO PARA FLEXBOX */
+        flex-shrink: 0; /* Impede que o mapa encolha mais do que o necessário */
     }
     /* Estilos para os rótulos do formulário */
     .contact-form label {
@@ -692,14 +714,21 @@ font-size: 1.1em;
     
     /* Media queries para responsividade em telas menores (celulares, tablets) */
     @media (max-width: 768px) {
-        .container {
+        /* NOME DA CLASSE ALTERADO PARA container-do-mapa */
+        .container-do-mapa { 
             flex-direction: column; /* Empilha as colunas verticalmente */
             margin: 20px auto;
             padding: 15px;
+            gap: 20px; /* Ajusta o espaçamento quando empilhado */
         }
         .contact-info, .contact-form {
             width: 100%; /* Ocupa 100% da largura disponível */
             min-width: unset; /* Remove a largura mínima */
+        }
+        /* Opcional: Centralizar o mapa em telas menores */
+        .map-container {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     /* Ajuste para menos cards por linha em telas menores */

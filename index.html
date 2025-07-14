@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="main.css">
 </head>
@@ -24,20 +24,27 @@
             <li><a href="promoções.html">Promoções</a></li>
             <li><a href="contatos.html">Contato</a></li>
             <!--carrinho de compras-->
-            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
-        </ul>  
+            <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span> <!-- ADICIONADO: Para exibir a contagem de itens no carrinho -->
+            </a>
+        </ul>
     </nav>
-    
+
     <div class="carrossel">
-        <img src="C:\Users\weydn\Downloads\mylicy\1.jpg" class="carrossel-img ativo">
-        <img src="C:\Users\weydn\Downloads\mylicy\2.jpg" class="carrossel-img">
-        <img src="C:\Users\weydn\Downloads\mylicy\3.jpg" class="carrossel-img">
+        <!-- ATUALIZADO: Caminhos das imagens do carrossel para placeholders -->
+        <img src="https://placehold.co/1200x400/FFC0CB/FFFFFF?text=Slide+1" class="carrossel-img ativo" alt="Slide 1">
+        <img src="https://placehold.co/1200x400/FFB6C1/FFFFFF?text=Slide+2" class="carrossel-img" alt="Slide 2">
+        <img src="https://placehold.co/1200x400/FF69B4/FFFFFF?text=Slide+3" class="carrossel-img" alt="Slide 3">
+        <!-- Se você tiver URLs de imagens reais hospedadas, substitua os placeholders por elas. -->
     </div>
 
     <div class="content">
         <main class="main-content">
             <h2>Nossos Produtos</h2>
+            <!-- O ID 'products-container' é crucial aqui para o JavaScript -->
             <div class="products" id="products-container">
+                <!-- Os cards de produtos serão carregados aqui pelo JavaScript -->
             </div>
             <a href="produtos.html" class="btn">Ver mais</a>
         </main>
@@ -79,7 +86,7 @@
             <div class="testimonials-header">
                 <h2>Depoimentos</h2>
             </div>
-            
+
             <div class="testimonials-carousel-container">
                 <div class="testimonials-carousel-track">
                     <div class="testimonial-card summary-card">
@@ -207,7 +214,7 @@
             </ul>
         </div>
 
-       
+
         <div class="footer-section">
             <h3 id="contatos">Contato</h3>
             <ul>
@@ -216,7 +223,7 @@
                 <li>Horário: Seg-Sab, 08h-17:30h | Dom, 8h-12:00h</li>
             </ul>
         </div>
- 
+
     </footer>
 
     <script src="app.js"></script>
