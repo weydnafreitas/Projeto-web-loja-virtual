@@ -12,21 +12,21 @@ const products = [
         name: "Macaquinho Rosa",
         price: 114.99,
         image: "imagens/macaquinho-rosa.jpg",
-        category: "calcas"
+        category: "macaquinho"
     },
     {
         id: 3,
         name: "Macacão",
         price: 125.99,
         image: "imagens/macacão.jpg",
-        category: "vestidos"
+        category: "macacao"
     },
     {
         id: 4,
         name: "Macacão Azul Marinho",
         price: 137.99,
         image: "imagens/macacão-azul-marinho.jpg",
-        category: "vestidos"
+        category: "macacao"
     }
 ];
 
