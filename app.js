@@ -1,31 +1,31 @@
-// Dados dos produtos
+// Dados dos produtos da página inicial
 const products = [
     {
         id: 1,
-        name: "MARQUIP Macrodão",
-        price: 100.00,
-        image: "https://via.placeholder.com/250x200?text=Macrodão",
-        category: "vestidos"
+        name: "Macaquinho Short Saia",
+        price: 104.99,
+        image: "imagens/macaquinho-short-saia.jpg",
+        category: "macaquinho"
     },
     {
         id: 2,
-        name: "MARQUIP Calça Alta",
-        price: 100.00,
-        image: "https://via.placeholder.com/250x200?text=Calça+Alta",
+        name: "Macaquinho Rosa",
+        price: 114.99,
+        image: "imagens/macaquinho-rosa.jpg",
         category: "calcas"
     },
     {
         id: 3,
-        name: "MARQUIP Macrodão Formal",
-        price: 100.00,
-        image: "https://via.placeholder.com/250x200?text=Macrodão+Formal",
+        name: "Macacão",
+        price: 125.99,
+        image: "imagens/macacão.jpg",
         category: "vestidos"
     },
     {
         id: 4,
-        name: "SOLICACHE Vestidinho",
-        price: 100.00,
-        image: "https://via.placeholder.com/250x200?text=Vestidinho",
+        name: "Macacão Azul Marinho",
+        price: 137.99,
+        image: "imagens/macacão-azul-marinho.jpg",
         category: "vestidos"
     }
 ];
