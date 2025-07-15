@@ -19,473 +19,313 @@ const homePageProducts = [
         name: "Macacão",
         price: 125.99,
         image: "imagens/macacão.jpg",
-        category: "macacao"
+        category: "macacão"
     },
     {
         id: 4,
         name: "Macacão Azul Marinho",
         price: 137.99,
         image: "imagens/macacão-azul-marinho.jpg",
-        category: "macacao"
+        category: "macacão"
     }
 ];
 
 // Dados dos produtos para a página 'Nossos Produtos'
 const allProducts = [
-    {
-        id: 5,
-        name: "MARQUIP Macacão (Calça Slim)",
-        price: 100.00,
-        oldPrice: 190.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+1",
-        category: "FEMININO / Calça Slim"
-    },
-    {
-        id: 6,
-        name: "MARQUIP Macacão (Calça Slim)",
-        price: 100.00,
-        oldPrice: 190.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+2",
-        category: "FEMININO / Calça Slim"
-    },
-    {
-        id: 7,
-        name: "EDUÇÃO Vestidinho",
-        price: 100.00,
-        oldPrice: 190.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+3",
-        category: "FEMININO / Vestidinho"
-    },
-    {
-        id: 8,
-        name: "CAMISA Casual",
-        price: 75.00,
-        oldPrice: 120.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+4",
-        category: "MASCULINO / Camisa"
-    },
-    {
-        id: 9,
-        name: "SAIA Plissada",
-        price: 90.00,
-        oldPrice: 150.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+5",
-        category: "FEMININO / Saia"
-    },
-    {
-        id: 10,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+6",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 11,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+7",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 12,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+8",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 13,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+9",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 14,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+10",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 15,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+11",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 16,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+12",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 17,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+13",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 18,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+14",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 19,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+15",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 20,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+16",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 21,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+17",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 22,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+18",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 23,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+19",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 24,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+20",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 25,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+21",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 26,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+22",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 27,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+23",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 28,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+24",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 29,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+25",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 30,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+26",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 31,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+27",
-        category: "INFANTIL / Conjunto"
-    },
-    {
-        id: 32,
-        name: "CONJUNTO Infantil",
-        price: 50.00,
-        oldPrice: 80.00,
-        image: "https://via.placeholder.com/200x200/F5F5F5/888888?text=Produto+28",
-        category: "INFANTIL / Conjunto"
-    }
+  {
+    "id": 5,
+    "name": "Conjunto 1",
+    "image": "imagens/conjunto (1).jpg",
+    "category": "conjunto",
+    "price": 89.90
+  },
+  {
+    "id": 6,
+    "name": "Conjunto 2",
+    "image": "imagens/conjunto (2).jpg",
+    "category": "conjunto",
+    "price": 92.50
+  },
+  {
+    "id": 7,
+    "name": "Conjunto 3",
+    "image": "imagens/conjunto (3).jpg",
+    "category": "conjunto",
+    "price": 87.00
+  },
+  {
+    "id": 8,
+    "name": "Conjunto 4",
+    "image": "imagens/conjunto (4).jpg",
+    "category": "conjunto",
+    "price": 95.90
+  },
+  {
+    "id": 9,
+    "name": "Conjunto 5",
+    "image": "imagens/conjunto (5).jpg",
+    "category": "conjunto",
+    "price": 79.99
+  },
+  {
+    "id": 10,
+    "name": "Conjunto 6",
+    "image": "imagens/conjunto (6).jpg",
+    "category": "conjunto",
+    "price": 91.50
+  },
+  {
+    "id": 11,
+    "name": "Conjunto 7",
+    "image": "imagens/conjunto (7).jpg",
+    "category": "conjunto",
+    "price": 88.80
+  },
+  {
+    "id": 12,
+    "name": "Conjunto 8",
+    "image": "imagens/conjunto (8).jpg",
+    "category": "conjunto",
+    "price": 90.00
+  },
+  {
+    "id": 13,
+    "name": "Conjunto 9",
+    "image": "imagens/conjunto (9).jpg",
+    "category": "conjunto",
+    "price": 93.70
+  },
+  {
+    "id": 14,
+    "name": "Conjunto 10",
+    "image": "imagens/conjunto (10).jpg",
+    "category": "conjunto",
+    "price": 86.90
+  },
+  {
+    "id": 15,
+    "name": "Conjunto 11",
+    "image": "imagens/conjunto (11).jpg",
+    "category": "conjunto",
+    "price": 97.20
+  },
+  {
+    "id": 16,
+    "name": "Conjunto 12",
+    "image": "imagens/conjunto (12).jpg",
+    "category": "conjunto",
+    "price": 84.00
+  },
+  {
+    "id": 17,
+    "name": "Conjunto 13",
+    "image": "imagens/conjunto (13).jpg",
+    "category": "conjunto",
+    "price": 85.90
+  },
+  {
+    "id": 18,
+    "name": "Conjunto 14",
+    "image": "imagens/conjunto (14).jpg",
+    "category": "conjunto",
+    "price": 90.90
+  },
+  {
+    "id": 19,
+    "name": "Conjunto 15",
+    "image": "imagens/conjunto (15).jpg",
+    "category": "conjunto",
+    "price": 94.99
+  },
+  {
+    "id": 20,
+    "name": "Conjunto 16",
+    "image": "imagens/conjunto (16).jpg",
+    "category": "conjunto",
+    "price": 89.00
+  },
+  {
+    "id": 21,
+    "name": "Conjunto 17",
+    "image": "imagens/conjunto (17).jpg",
+    "category": "conjunto",
+    "price": 93.30
+  },
+  {
+    "id": 22,
+    "name": "Conjunto 18",
+    "image": "imagens/conjunto (18).jpg",
+    "category": "conjunto",
+    "price": 88.00
+  },
+  {
+    "id": 23,
+    "name": "Conjunto 19",
+    "image": "imagens/conjunto (19).jpg",
+    "category": "conjunto",
+    "price": 91.80
+  },
+  {
+    "id": 25,
+    "name": "Conjunto 21",
+    "image": "imagens/conjunto (21).jpg",
+    "category": "conjunto",
+    "price": 92.00
+  },
+  {
+    "id": 26,
+    "name": "Conjunto 22",
+    "image": "imagens/conjunto (22).jpg",
+    "category": "conjunto",
+    "price": 86.50
+  },
+  {
+    "id": 27,
+    "name": "Conjunto 23",
+    "image": "imagens/conjunto (23).jpg",
+    "category": "conjunto",
+    "price": 89.70
+  },
+  {
+    "id": 28,
+    "name": "Conjunto 24",
+    "image": "imagens/conjunto (24).jpg",
+    "category": "conjunto",
+    "price": 90.30
+  },
 ];
 
 // Dados dos produtos para a página de Promoções (NOVO ARRAY)
 const promotionsProducts = [
-    {
-        id: 33, // IDs únicos para a página de promoções
-        name: "Vestido Floral Verão",
-        price: 89.99,
-        oldPrice: 150.00,
-        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+1",
-        category: "FEMININO / Vestido"
-    },
-    {
-        id: 34,
-        name: "Calça Jeans Conforto",
-        price: 75.00,
-        oldPrice: 130.00,
-        image: "https://placehold.co/200x200/FFC0CB/FFFFFF?text=Promocao+2",
-        category: "FEMININO / Calça"
-    },
-    {
-        id: 35,
-        name: "Blusa de Malha Leve",
-        price: 49.99,
-        oldPrice: 90.00,
-        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+3",
-        category: "FEMININO / Blusa"
-    },
-    {
-        id: 36,
-        name: "Conjunto Fitness",
-        price: 110.00,
-        oldPrice: 180.00,
-        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+4",
-        category: "FEMININO / Fitness"
-    },
-    {
-        id: 37,
-        name: "Saia Midi Plissada",
-        price: 65.00,
-        oldPrice: 110.00,
-        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+5",
-        category: "FEMININO / Saia"
-    },
-    {
-        id: 38,
-        name: "Macacão Casual",
-        price: 95.00,
-        oldPrice: 160.00,
-        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+6",
-        category: "FEMININO / Macacão"
-    },
-    {
-        id: 39,
-        name: "Short Jeans Despojado",
-        price: 55.00,
-        oldPrice: 95.00,
-        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+7",
-        category: "FEMININO / Short"
-    },
-    {
-        id: 40,
-        name: "Blazer Elegante",
-        price: 140.00,
-        oldPrice: 220.00,
-        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+8",
-        category: "FEMININO / Casaco"
-    },
-    {
-        id: 41,
-        name: "Vestido de Festa",
-        price: 180.00,
-        oldPrice: 300.00,
-        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+9",
-        category: "FEMININO / Vestido"
-    },
-    {
-        id: 42,
-        name: "Camiseta Básica Algodão",
-        price: 35.00,
-        oldPrice: 60.00,
-        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+10",
-        category: "FEMININO / Camiseta"
-    },
-    {
-        id: 43,
-        name: "Jaqueta Jeans Clássica",
-        price: 120.00,
-        oldPrice: 200.00,
-        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+11",
-        category: "FEMININO / Jaqueta"
-    },
-    {
-        id: 44,
-        name: "Body Renda",
-        price: 60.00,
-        oldPrice: 100.00,
-        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+12",
-        category: "FEMININO / Body"
-    },
-    {
-        id: 45,
-        name: "Saída de Praia",
-        price: 70.00,
-        oldPrice: 120.00,
-        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+13",
-        category: "FEMININO / Praia"
-    },
-    {
-        id: 46,
-        name: "Macaquinho Estampado",
-        price: 80.00,
-        oldPrice: 140.00,
-        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+14",
-        category: "FEMININO / Macaquinho"
-    },
-    {
-        id: 47,
-        name: "Moletom Confortável",
-        price: 90.00,
-        oldPrice: 150.00,
-        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+15",
-        category: "UNISSEX / Moletom"
-    },
-    {
-        id: 48,
-        name: "Legging Esportiva",
-        price: 50.00,
-        oldPrice: 85.00,
-        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+16",
-        category: "FEMININO / Legging"
-    },
-    {
-        id: 49,
-        name: "Camisa Social Feminina",
-        price: 70.00,
-        oldPrice: 120.00,
-        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+17",
-        category: "FEMININO / Camisa"
-    },
-    {
-        id: 50,
-        name: "Bermuda Jeans",
-        price: 60.00,
-        oldPrice: 100.00,
-        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+18",
-        category: "FEMININO / Bermuda"
-    },
-    {
-        id: 51,
-        name: "Top Cropped",
-        price: 40.00,
-        oldPrice: 70.00,
-        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+19",
-        category: "FEMININO / Top"
-    },
-    {
-        id: 52,
-        name: "Cardigã Leve",
-        price: 75.00,
-        oldPrice: 130.00,
-        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+20",
-        category: "FEMININO / Casaco"
-    },
-    {
-        id: 53,
-        name: "Vestido Tubinho",
-        price: 85.00,
-        oldPrice: 140.00,
-        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+21",
-        category: "FEMININO / Vestido"
-    },
-    {
-        id: 54,
-        name: "Macacão Pantacourt",
-        price: 105.00,
-        oldPrice: 170.00,
-        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+22",
-        category: "FEMININO / Macacão"
-    },
-    {
-        id: 55,
-        name: "Short Alfaiataria",
-        price: 68.00,
-        oldPrice: 115.00,
-        image: "https://placehold.co/200x200/C71585/FFFFFF?text=Promocao+23",
-        category: "FEMININO / Short"
-    },
-    {
-        id: 56,
-        name: "Blusa Ciganinha",
-        price: 52.00,
-        oldPrice: 90.00,
-        image: "https://placehold.co/200x200/FF1493/FFFFFF?text=Promocao+24",
-        category: "FEMININO / Blusa"
-    },
-    {
-        id: 57,
-        name: "Conjunto de Lingerie",
-        price: 78.00,
-        oldPrice: 130.00,
-        image: "https://placehold.co/200x200/FFB6C1/FFFFFF?text=Promocao+25",
-        category: "FEMININO / Lingerie"
-    },
-    {
-        id: 58,
-        name: "Calça Pantalona",
-        price: 92.00,
-        oldPrice: 155.00,
-        image: "https://placehold.co/200x200/FFD1DC/FFFFFF?text=Promocao+26",
-        category: "FEMININO / Calça"
-    },
-    {
-        id: 59,
-        name: "Body Manga Longa",
-        price: 65.00,
-        oldPrice: 110.00,
-        image: "https://placehold.co/200x200/FF69B4/FFFFFF?text=Promocao+27",
-        category: "FEMININO / Body"
-    },
-    {
-        id: 60,
-        name: "Saia Lápis",
-        price: 58.00,
-        oldPrice: 98.00,
-        image: "https://placehold.co/200x200/DB7093/FFFFFF?text=Promocao+28",
-        category: "FEMININO / Saia"
-    }
+  {
+    "id": 33,
+    "name": "São João (1)",
+    "image": "imagens/sao joao (1).jpg",
+    "category": "promoção",
+    "price": 89.90,
+    "oldPrice": 129.90
+  },
+  {
+    "id": 34,
+    "name": "São João (2)",
+    "image": "imagens/sao joao (2).jpg",
+    "category": "promoção",
+    "price": 92.50,
+    "oldPrice": 135.00
+  },
+  {
+    "id": 35,
+    "name": "São João (3)",
+    "image": "imagens/sao joao (3).jpg",
+    "category": "promoção",
+    "price": 87.00,
+    "oldPrice": 124.00
+  },
+  {
+    "id": 36,
+    "name": "São João (4)",
+    "image": "imagens/sao joao (4).jpg",
+    "category": "promoção",
+    "price": 95.90,
+    "oldPrice": 140.00
+  },
+  {
+    "id": 37,
+    "name": "São João (5)",
+    "image": "imagens/sao joao (5).jpg",
+    "category": "promoção",
+    "price": 79.99,
+    "oldPrice": 119.90
+  },
+  {
+    "id": 38,
+    "name": "São João (6)",
+    "image": "imagens/sao joao (6).jpg",
+    "category": "promoção",
+    "price": 91.50,
+    "oldPrice": 132.00
+  },
+  {
+    "id": 39,
+    "name": "São João (7)",
+    "image": "imagens/sao joao (7).jpg",
+    "category": "promoção",
+    "price": 88.80,
+    "oldPrice": 125.00
+  },
+  {
+    "id": 40,
+    "name": "São João (8)",
+    "image": "imagens/sao joao (8).jpg",
+    "category": "promoção",
+    "price": 90.00,
+    "oldPrice": 129.90
+  },
+  {
+    "id": 41,
+    "name": "São João (9)",
+    "image": "imagens/sao joao (9).jpg",
+    "category": "promoção",
+    "price": 93.70,
+    "oldPrice": 138.90
+  },
+  {
+    "id": 42,
+    "name": "São João (10)",
+    "image": "imagens/sao joao (10).jpg",
+    "category": "promoção",
+    "price": 86.90,
+    "oldPrice": 130.00
+  },
+  {
+    "id": 43,
+    "name": "São João (11)",
+    "image": "imagens/sao joao (11).jpg",
+    "category": "promoção",
+    "price": 97.20,
+    "oldPrice": 145.00
+  },
+  {
+    "id": 44,
+    "name": "São João (12)",
+    "image": "imagens/sao joao (12).jpg",
+    "category": "promoção",
+    "price": 84.00,
+    "oldPrice": 123.00
+  },
+  {
+    "id": 45,
+    "name": "São João (13)",
+    "image": "imagens/sao joao (13).jpg",
+    "category": "promoção",
+    "price": 85.90,
+    "oldPrice": 128.00
+  },
+  {
+    "id": 46,
+    "name": "São João (14)",
+    "image": "imagens/sao joao (14).jpg",
+    "category": "promoção",
+    "price": 90.90,
+    "oldPrice": 136.00
+  },
+  {
+    "id": 47,
+    "name": "São João (15)",
+    "image": "imagens/sao joao (15).jpg",
+    "category": "promoção",
+    "price": 94.99,
+    "oldPrice": 144.99
+  },
+  {
+    "id": 48,
+    "name": "São João (16)",
+    "image": "imagens/sao joao (16).jpg",
+    "category": "promoção",
+    "price": 95.00,
+    "oldPrice": 140.00
+  }
 ];
-
 
 // Carrossel
 const imagens = document.querySelectorAll('.carrossel-img');
