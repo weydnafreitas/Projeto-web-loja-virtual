@@ -26,7 +26,15 @@
     overflow-x: hidden;
     font-size: var(--base-font-size);
     }
-  
+
+    body h2 {
+        color: var(--rosa-principal);
+    }
+
+    a {
+        color: var(--rosa-principal);
+    }
+
     /* Layout Principal */
     .site-container {
     max-width: 1200px;
@@ -567,8 +575,8 @@ font-size: 1.1em;
         background-color: var(--rosa-escuro); /* Cor de hover do botão */
     }
     
-    /*Pagina das dúvidas frequentes*/
-    main {
+    /*Pagina ajuda*/
+    .duvidas-frequentes main, .trocas-devolucoes main, .formas-pagamento main {
         padding: 40px 20px;
         max-width: 800px;
         margin: auto;
@@ -576,16 +584,26 @@ font-size: 1.1em;
     
     .faq {
         margin-bottom: 30px;
+        background-color: var(--border-color);
+        border-radius: 12px;
     }
+
     .faq p {
         margin: 0 0 20px 0;
         line-height: 1.6;
     }
     
-    
-    
-    
-    
+    .trocas-devolucoes .ajuda-section, .formas-pagamento .ajuda-section {
+        margin-bottom: 30px;
+        background-color: var(--border-color);
+        border-radius: 12px;
+    }
+
+    /*Ponto da página dentro do background*/
+    .ajuda-section ul {
+        list-style-position: inside;
+    }
+
     /* Estilos do Ícone de Carrinho */
     .cart-icon {
         font-size: 24px; /* Tamanho do ícone */
