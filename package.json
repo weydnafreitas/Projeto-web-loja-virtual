@@ -1,0 +1,22 @@
+{
+  "name": "projeto-web-loja-virtual",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weydnafreitas/Projeto-web-loja-virtual.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weydnafreitas/Projeto-web-loja-virtual/issues"
+  },
+  "homepage": "https://github.com/weydnafreitas/Projeto-web-loja-virtual#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
