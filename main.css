@@ -484,8 +484,9 @@ font-size: 1.1em;
     .our-products {
         background-color: var(--white);
         padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Slightly more prominent shadow for standalone */
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+        text-align: center;
     }
     
     .our-products h2 {
