@@ -1,0 +1,180 @@
+/* Estilos específicos para a página do carrinho */
+.cart-page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-page-container h2 {
+    color: var(--rosa-principal);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.cart-items-container {
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+    justify-content: space-between; /* Distribui os itens */
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Permite que os detalhes ocupem o espaço restante */
+    min-width: 150px; /* Largura mínima para os detalhes */
+}
+
+.cart-item-details h3 {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.cart-item-details .price {
+    font-size: 0.95em;
+    color: var(--light-text-color);
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-quantity button {
+    background-color: var(--border-color);
+    color: var(--rosa-principal);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-quantity button:hover {
+    background-color: var(--rosa-principal);
+    color: var(--white);
+}
+
+.cart-item-quantity span {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.cart-item-remove {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-remove:hover {
+    background-color: #cc0000;
+}
+
+.cart-summary {
+    border-top: 2px solid var(--rosa-principal);
+    padding-top: 20px;
+    text-align: right;
+}
+
+.cart-summary p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.cart-summary .total-price {
+    font-size: 1.5em;
+    color: var(--rosa-escuro);
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+.cart-actions .btn {
+    flex: 1; /* Permite que os botões ocupem o espaço disponível */
+    min-width: 180px; /* Largura mínima para os botões */
+    text-align: center;
+}
+
+.cart-empty-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--light-text-color);
+    padding: 50px 0;
+}
+
+/* Estilos do Ícone de Carrinho (para a navegação) */
+.cart-icon {
+    font-size: 24px; /* Tamanho do ícone */
+    color: var(--rosa-principal); /* Cor do ícone */
+    margin-left: 20px; /* Espaçamento à esquerda do ícone */
+    transition: color 0.3s ease, transform 0.2s ease; /* Transição suave para hover */
+}
+    
+.cart-icon:hover {
+    color: var(--rosa-escuro); /* Cor ao passar o mouse */
+    transform: translateY(-1px); /* Efeito de "levantar" sutil */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cart-item-details {
+        width: 100%;
+        text-align: left;
+    }
+    .cart-item-quantity {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+    .cart-item-remove {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .cart-actions {
+        flex-direction: column;
+    }
+    .cart-actions .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - My Licy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        FRETE GRÁTIS PARA TODO O BRASIL!
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="produtos.html">Nossos Produtos</a></li>
+            <li><a href="promoções.html">Promoções</a></li>
+            <li><a href="contatos.html">Contato</a></li>
+            <a href="carrinho.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span> <!-- Para exibir a contagem de itens no carrinho -->
+            </a>
+        </ul>
+    </nav>
+
+    <main class="cart-page-container">
+        <h2>Seu Carrinho de Compras</h2>
+
+        <div id="cart-items-list" class="cart-items-container">
+            <!-- Os itens do carrinho serão carregados aqui pelo JavaScript -->
+        </div>
+
+        <div id="cart-empty-message" class="cart-empty-message" style="display: none;">
+            Seu carrinho está vazio. Que tal dar uma olhada em nossos produtos?
+            <a href="produtos.html" class="btn" style="margin-top: 20px;">Ver Produtos</a>
+        </div>
+
+        <div class="cart-summary">
+            <p>Subtotal: R$ <span id="cart-subtotal">0,00</span></p>
+            <p>Frete: R$ <span id="cart-shipping">0,00</span></p>
+            <p class="total-price">Total: R$ <span id="cart-total">0,00</span></p>
+        </div>
+
+        <div class="cart-actions">
+            <a href="produtos.html" class="btn">Continuar Comprando</a>
+            <button class="btn" id="checkout-button">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Sobre Nós</h3>
+            <p>My Licy é marca feita para mulheres reais e confiantes. Acreditamos que estilo, conforto e autoestima não têm tamanho.
+                Por isso, vendemos roupas que valorizam cada curva, com design atual, caimento impecável e personalidade.
+                Mais do que moda, celebramos a liberdade de se vestir como quiser.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Ajuda</h3>
+            <ul>
+                <li><a href="duvidas.html">Dúvidas frequentes</a></li>
+                <li><a href="trocas.html">Trocas e devoluções</a></li>
+                <li><a href="pagamento.html">Formas de pagamento</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3 id="contatos">Contato</h3>
+            <ul>
+                <li><a href="https://instagram.com/my_licy?igshid=YmMyMTA2M2Y=">Instagram: my_licy</a></li>
+                <li><a href="https://chat.whatsapp.com/0CMXm0AlQDQ1DfWD5UhMl7">Whatsapp: (85)9111-3665</a></li>
+                <li>Horário: Seg-Sab, 08h-17:30h | Dom, 8h-12:00h</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Inclua o seu app.js aqui -->
+    <script src="app.js"></script>
+    <script>
+        // Quando o DOM estiver carregado, inicializa as funções
+        document.addEventListener('DOMContentLoaded', () => {
+            // A função loadCartItems() já é chamada pelo app.js e se encarrega de tudo.
+            // Mantemos este bloco apenas para listeners de botões específicos da página do carrinho,
+            // como o botão de finalizar compra.
+            const checkoutButton = document.getElementById('checkout-button');
+            if (checkoutButton) {
+                checkoutButton.addEventListener('click', () => {
+                    alert('Funcionalidade de Finalizar Compra ainda não implementada. Você pode adicionar a lógica aqui!');
+                    // Opcional: Limpar o carrinho após a "finalização"
+                    // cart = [];
+                    // localStorage.removeItem('cart');
+                    // loadCartItems();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -27,11 +27,12 @@ const allProducts = [
     { "id": 21, "name": "Conjunto 17", "image": "imagens/conjunto (17).jpg", "category": "conjunto", "price": 93.30 },
     { "id": 22, "name": "Conjunto 18", "image": "imagens/conjunto (18).jpg", "category": "conjunto", "price": 88.00 },
     { "id": 23, "name": "Conjunto 19", "image": "imagens/conjunto (19).jpg", "category": "conjunto", "price": 91.80 },
-    { "id": 24, "name": "Conjunto 20", "image": "imagens/conjunto (20).jpg", "category": "conjunto", "price": 94.00 },
+    { "id": 24, "name": "Conjunto 20", "image": "imagens/conjunto (20).jpg", "category": "conjunto", "price": 94.00 }, // Restaurado
     { "id": 25, "name": "Conjunto 21", "image": "imagens/conjunto (21).jpg", "category": "conjunto", "price": 92.00 },
     { "id": 26, "name": "Conjunto 22", "image": "imagens/conjunto (22).jpg", "category": "conjunto", "price": 86.50 },
     { "id": 27, "name": "Conjunto 23", "image": "imagens/conjunto (23).jpg", "category": "conjunto", "price": 89.70 },
     { "id": 28, "name": "Conjunto 24", "image": "imagens/conjunto (24).jpg", "category": "conjunto", "price": 90.30 }
+    // Removidos os placeholders de placehold.co para consistência com suas imagens locais
 ];
 
 // Dados dos produtos para a página de Promoções
@@ -54,41 +55,38 @@ const promotionsProducts = [
     { "id": 48, "name": "São João (16)", "image": "imagens/sao joao (16).jpg", "category": "promoção", "price": 95.00, "oldPrice": 140.00 }
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Variável global para o carrinho, carregada do localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-// Função para carregar os produtos em um container específico (usado em index.html e produtos.html)
-function loadProducts(productsArray, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    container.innerHTML = ''; // Limpa o container antes de adicionar novos produtos
-
-    productsArray.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.className = 'product-card';
-        productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='https://placehold.co/200x200/F0F0F0/808080?text=Imagem+Nao+Encontrada';">
-            <p class="category">${product.category}</p>
-            <h3 class="name">${product.name}</h3>
-            ${product.oldPrice ? `<p class="old-price">R$ ${product.oldPrice.toFixed(2).replace('.', ',')}</p>` : ''}
-            <p class="price">R$ ${product.price.toFixed(2).replace('.', ',')}</p>
-            <button class="buy-btn" data-id="${product.id}">Adicionar ao Carrinho</button>
-        `;
-        container.appendChild(productCard);
-    });
-
-    // Adiciona event listeners aos botões "Adicionar ao Carrinho"
-    container.querySelectorAll('.buy-btn').forEach(button => {
-        button.addEventListener('click', addToCart);
-    });
-}
 
 // Função para adicionar produto ao carrinho
 function addToCart(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
 
-    // Procura o produto em TODOS os arrays de produtos
+    // Procura o produto em TODOS os arrays de produtos (homePageProducts, allProducts, promotionsProducts)
+    // Certifique-se de que esses arrays estejam definidos no seu app.js completo
     const product = homePageProducts.find(p => p.id === productId) ||
                     allProducts.find(p => p.id === productId) ||
                     promotionsProducts.find(p => p.id === productId);
@@ -110,7 +108,7 @@ function addToCart(event) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart)); // Salva o array atualizado no localStorage
-    updateCartCount(); // Atualiza o contador após adicionar
+    updateCartCount();
     showNotification(`${product.name} adicionado ao carrinho!`);
 }
 
@@ -158,15 +156,13 @@ function showNotification(message) {
     }, 3000);
 }
 
-// Funções específicas da página do carrinho (para serem chamadas apenas em carrinho.html)
-// Função para carregar os itens do carrinho na página do carrinho
+// Funções específicas da página do carrinho (chamadas apenas em carrinho.html)
 function loadCartItems() {
     const cartItemsList = document.getElementById('cart-items-list');
     const cartEmptyMessage = document.getElementById('cart-empty-message');
     const cartSummary = document.querySelector('.cart-summary');
     const cartActions = document.querySelector('.cart-actions');
 
-    // Sempre atualiza a variável global 'cart' com os dados do localStorage ao carregar os itens
     cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart.length === 0) {
@@ -174,19 +170,21 @@ function loadCartItems() {
         cartItemsList.innerHTML = '';
         cartSummary.style.display = 'none';
         cartActions.style.display = 'none';
+        updateCartCount();
+        return;
     } else {
         cartEmptyMessage.style.display = 'none';
         cartSummary.style.display = 'block';
-        cartActions.style.display = 'flex'; // Exibe os botões de ação
+        cartActions.style.display = 'flex';
     }
 
-    cartItemsList.innerHTML = ''; // Limpa os itens existentes
+    cartItemsList.innerHTML = '';
 
     cart.forEach(item => {
         const cartItemDiv = document.createElement('div');
         cartItemDiv.className = 'cart-item';
         cartItemDiv.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F0F0F0/808080?text=Imagem+Nao+Encontrada';">
+            <img src="${item.image}" alt="${item.name}">
             <div class="cart-item-details">
                 <h3>${item.name}</h3>
                 <p class="price">R$ ${item.price.toFixed(2).replace('.', ',')}</p>
@@ -201,7 +199,6 @@ function loadCartItems() {
         cartItemsList.appendChild(cartItemDiv);
     });
 
-    // Adiciona event listeners para os botões de quantidade e remover
     cartItemsList.querySelectorAll('.decrease-quantity').forEach(button => {
         button.addEventListener('click', decreaseQuantity);
     });
@@ -213,10 +210,9 @@ function loadCartItems() {
     });
 
     updateCartSummary();
-    updateCartCount(); // Atualiza o contador do carrinho na navegação após carregar/modificar itens
+    updateCartCount();
 }
 
-// Função para diminuir a quantidade de um item no carrinho
 function decreaseQuantity(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
     const itemIndex = cart.findIndex(item => item.id === productId);
@@ -225,15 +221,13 @@ function decreaseQuantity(event) {
         if (cart[itemIndex].quantity > 1) {
             cart[itemIndex].quantity -= 1;
         } else {
-            // Se a quantidade for 1, remove o item
             cart.splice(itemIndex, 1);
         }
         localStorage.setItem('cart', JSON.stringify(cart));
-        loadCartItems(); // Recarrega os itens para atualizar a UI e o contador
+        loadCartItems();
     }
 }
 
-// Função para aumentar a quantidade de um item no carrinho
 function increaseQuantity(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
     const item = cart.find(item => item.id === productId);
@@ -241,35 +235,28 @@ function increaseQuantity(event) {
     if (item) {
         item.quantity += 1;
         localStorage.setItem('cart', JSON.stringify(cart));
-        loadCartItems(); // Recarrega os itens para atualizar a UI e o contador
+        loadCartItems();
     }
 }
 
-// Função para remover um item do carrinho
 function removeItemFromCart(event) {
     const productId = parseInt(event.target.getAttribute('data-id'));
     cart = cart.filter(item => item.id !== productId);
     localStorage.setItem('cart', JSON.stringify(cart));
-    loadCartItems(); // Recarrega os itens para atualizar a UI e o contador
+    loadCartItems();
 }
 
-// Função para atualizar o resumo do carrinho (subtotal, frete, total)
 function updateCartSummary() {
     const subtotalElement = document.getElementById('cart-subtotal');
     const shippingElement = document.getElementById('cart-shipping');
     const totalElement = document.getElementById('cart-total');
 
     let subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    let shipping = 0; // Por enquanto, frete grátis. Você pode adicionar lógica de cálculo aqui.
+    let shipping = 0;
 
-    // Se o subtotal for 0, o frete também é 0
     if (subtotal === 0) {
         shipping = 0;
     } else {
-        // Exemplo: Frete grátis acima de R$ 200,00
-        // if (subtotal < 200) {
-        //     shipping = 15; // Exemplo de custo de frete
-        // }
         shipping = 0; // Mantendo frete grátis para o exemplo inicial
     }
 
@@ -280,163 +267,3 @@ function updateCartSummary() {
     totalElement.textContent = total.toFixed(2).replace('.', ',');
 }
 
-// --- NOVO CÓDIGO PARA O CARROSSEL PRINCIPAL DO TOPO ---
-function setupMainCarousel() {
-    const carouselImages = document.querySelectorAll('.carrossel-img');
-    let currentImageIndex = 0;
-    const intervalTime = 3000; // Tempo em milissegundos (3 segundos)
-
-    if (carouselImages.length === 0) {
-        return;
-    }
-
-    function showImage(index) {
-        carouselImages.forEach((img, i) => {
-            img.classList.remove('ativo');
-        });
-        carouselImages[index].classList.add('ativo');
-    }
-
-    function nextImage() {
-        currentImageIndex++;
-        if (currentImageIndex >= carouselImages.length) {
-            currentImageIndex = 0;
-        }
-        showImage(currentImageIndex);
-    }
-
-    showImage(currentImageIndex);
-    setInterval(nextImage, intervalTime);
-}
-// --- FIM DO NOVO CÓDIGO PARA O CARROSSEL PRINCIPAL DO TOPO ---
-
-
-// Carrossel de depoimentos
-function setupTestimonialCarousel() {
-    const testimonialCarousel = document.querySelector('.testimonials-carousel-track');
-    const prevArrow = document.querySelector('.prev-arrow');
-    const nextArrow = document.querySelector('.next-arrow');
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-
-    if (!testimonialCarousel || !prevArrow || !nextArrow || testimonialCards.length === 0) {
-        return; // Sai se os elementos não forem encontrados
-    }
-
-    let currentIndex = 0;
-    let visibleCards = 0;
-    let cardWidth = 0;
-    let gap = 0;
-
-    function calculateCardMetrics() {
-        const carouselContainer = document.querySelector('.testimonials-carousel-container');
-        if (!carouselContainer) return;
-
-        const style = window.getComputedStyle(testimonialCarousel);
-        gap = parseFloat(style.gap) || 20; // Pega o gap do CSS, padrão 20px
-
-        if (testimonialCards.length > 0) {
-            cardWidth = testimonialCards[0].offsetWidth;
-        } else {
-            cardWidth = 320; // Valor padrão se não houver cards
-        }
-
-        const containerWidth = carouselContainer.offsetWidth;
-
-        if (cardWidth > 0) {
-            visibleCards = Math.floor((containerWidth + gap) / (cardWidth + gap));
-            if (visibleCards === 0 && containerWidth > 0) {
-                visibleCards = 1;
-            }
-        } else {
-            visibleCards = 1;
-        }
-
-        visibleCards = Math.min(visibleCards, testimonialCards.length);
-
-        const maxIndex = testimonialCards.length - visibleCards;
-        if (currentIndex > maxIndex && maxIndex >= 0) {
-            currentIndex = maxIndex;
-        } else if (maxIndex < 0) {
-            currentIndex = 0;
-        }
-
-        updateCarouselPosition();
-    }
-
-    function updateCarouselPosition() {
-        if (testimonialCards.length > visibleCards) {
-            const offset = currentIndex * (cardWidth + gap);
-            testimonialCarousel.style.transform = `translateX(-${offset}px)`;
-        } else {
-            testimonialCarousel.style.transform = `translateX(0px)`;
-        }
-    }
-
-    function slideNext() {
-        const maxIndex = testimonialCards.length - visibleCards;
-        if (maxIndex <= 0) return;
-
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        updateCarouselPosition();
-    }
-
-    function slidePrev() {
-        const maxIndex = testimonialCards.length - visibleCards;
-        if (maxIndex <= 0) return;
-
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = maxIndex;
-        }
-        updateCarouselPosition();
-    }
-
-    nextArrow.addEventListener('click', slideNext);
-    prevArrow.addEventListener('click', slidePrev);
-
-    window.addEventListener('resize', calculateCardMetrics);
-    setTimeout(calculateCardMetrics, 100);
-}
-
-
-// Quando o DOM estiver carregado, inicializa as funções
-document.addEventListener('DOMContentLoaded', () => {
-    // Carrega os produtos da página inicial (se o elemento existir)
-    if (document.getElementById('products-container')) {
-        loadProducts(homePageProducts, 'products-container');
-    }
-
-    // Carrega os produtos da página de "Nossos Produtos" (se o elemento existir)
-    if (document.getElementById('all-products-grid')) {
-        loadProducts(allProducts, 'all-products-grid');
-    }
-
-    // Carrega os produtos da página de "Promoções" (se o elemento existir)
-    if (document.getElementById('promotions-grid')) {
-        loadProducts(promotionsProducts, 'promotions-grid');
-    }
-
-    // Chama a função para o carrossel principal do topo
-    setupMainCarousel();
-
-    // Configura o carrossel de depoimentos (se os elementos existirem)
-    setupTestimonialCarousel();
-
-    // Lógica específica para a página do carrinho (se estivermos nela)
-    if (document.getElementById('cart-items-list')) {
-        loadCartItems();
-        const checkoutButton = document.getElementById('checkout-button');
-        if (checkoutButton) {
-            checkoutButton.addEventListener('click', () => {
-                alert('Funcionalidade de Finalizar Compra ainda não implementada. Você pode adicionar a lógica aqui!');
-            });
-        }
-    } else {
-        updateCartCount();
-    }
-});
